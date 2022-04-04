@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SecondActivityOne">
+
+    <!--Text view to display the text heading-->
+    <TextView
+        android:id="@+id/text_one_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="#2196F3"
+        android:text="@string/text_one_head"
+        android:textSize="48sp"
+        android:textStyle="bold" />
+
+    <!--Scroll view for the scroll effect-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--Text view to display the text body-->
+        <TextView
+            android:id="@+id/text_one_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_one_body"
+            android:textSize="16sp" />
+
+    </ScrollView>
+
+</LinearLayout>
