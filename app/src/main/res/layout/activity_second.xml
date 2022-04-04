@@ -4,61 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".SecondActivity">
 
-    <!--Text view for displaying the header-->
+    <!--textview for displaying the received messaged from the main activity-->
     <TextView
-        android:id="@+id/text_header_reply"
+        android:id="@+id/text_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
-        android:text="@string/text_header_reply"
+        android:text="@string/text_header"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textStyle="bold"
-        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!--Text view for displaying reply from the second Activity-->
+    <!--textview for displaying the received message-->
     <TextView
-        android:id="@+id/text_message_reply"
+        android:id="@+id/text_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_header_reply" />
+        app:layout_constraintTop_toBottomOf="@+id/text_header" />
 
-    <!--Button for sending message to the second Activity-->
+    <!--button for sending the reply to the main activity-->
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_second"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
-        android:onClick="launchSecondActivity"
-        android:text="@string/button_main"
+        android:onClick="returnReply"
+        android:text="@string/button_second"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
-    <!--EditText view for writing the message-->
+    <!--edittext view for writing the reply message-->
     <EditText
-        android:id="@+id/editText_main"
+        android:id="@+id/editText_second"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
         android:ems="10"
-        android:hint="@string/editText_main"
+        android:hint="@string/editText_second"
         android:inputType="textLongMessage"
-        android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/button_second"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
